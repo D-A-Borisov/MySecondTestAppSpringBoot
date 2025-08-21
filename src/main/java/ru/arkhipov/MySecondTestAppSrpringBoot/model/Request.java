@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.swing.text.Position;
 import java.time.LocalDateTime;
 
 @Data
@@ -46,6 +47,11 @@ public class Request {
     private LocalDateTime requestTime;
 
     private String source;
+    private Positions positions;
+    private Double salary;
+    private Double bonus;
+    private Integer workDays;
+
     @Min(value = 1, message = "CommunicationId должен быть не менее 1")
     @Max(value = 100000, message = "CommunicationId должен быть не более 100000")
     private int communicationId;
